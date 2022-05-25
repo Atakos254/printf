@@ -8,7 +8,6 @@
  * in representation parameter for print hexadecimal format
  * Return: address pointer
  */
-
 int print_ptr(va_list arg)
 {
 	unsigned long int dec, buffr;
