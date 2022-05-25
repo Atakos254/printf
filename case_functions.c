@@ -72,19 +72,28 @@ int print_unsign(va_list arg, int base)
 int print_string(va_list arg)
 {
 	char *s;
-	int cont = 0;
-
+	int i, count = 0;
+	char *res;
+		
 	s = va_arg(arg, char *);
 	if (!s)
+		return (_puts("(null)"));
+	for (i = 0; s[i]; i++)
 	{
-		s = "(null)";
-		_puts(s);
-
-		return (_strlen(s));
+		if (s[i] > 0 && (s[i] < 32 || s[i] >= 
+127)) 
+		{
+			_puts("\\x");
+			count += 2;
+			res = convert(s[i], 16, 0);
+			if (!res[1])
+				count += _putchar('0');
+			count += _puts(res);
+		}
+		else
+			count += _putchar(s[i]);
 	}
-	_puts(s);
-	cont = _strlen(s);
-	return (cont);
+	return (count);
 }
 
 /**
