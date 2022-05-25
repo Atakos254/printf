@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+
 /**
  *function_manager - function manager
  *@c: character to find
