@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_character - prints character
  * @arg: va_list parameter
@@ -14,6 +15,7 @@ int print_character(va_list arg)
 
 	return (1);
 }
+
 /**
  * print_sign - print sign
  * @arg: va_list parameter
@@ -38,6 +40,7 @@ int print_sign(va_list arg, int base)
 	cont += _strlen(s);
 	return (cont);
 }
+
 /**
  * print_unsign - print_unsign
  * @arg: va_list parameter
@@ -59,6 +62,7 @@ int print_unsign(va_list arg, int base)
 	return (cont);
 
 }
+
 /**
  * print_string - print string
  * @arg: va_list parameter
@@ -82,6 +86,7 @@ int print_string(va_list arg)
 	cont = _strlen(s);
 	return (cont);
 }
+
 /**
  * print_base16_upper_lower - print_base16_upper_lower
  * @arg: va_list parameter
