@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *_printf - printf
  *@format: const char pointer
@@ -22,6 +23,7 @@ int _printf(const char *format, ...)
 	va_end(arg);
 	return (cont);
 }
+
 /**
  *loop_format - loop format
  *@arg: va_list arg
@@ -72,6 +74,7 @@ int loop_format(va_list arg, const char *string)
 	}
 	return (cont);
 }
+
 /**
  * check_percent - call function manager
  *@flag: value by reference
